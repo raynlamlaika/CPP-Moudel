@@ -6,10 +6,9 @@
 /*   By: rlamlaik <rlamlaik@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/01 14:49:28 by rlamlaik          #+#    #+#             */
-/*   Updated: 2025/07/01 18:09:37 by rlamlaik         ###   ########.fr       */
+/*   Updated: 2025/07/03 19:24:05 by rlamlaik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 
 #include <iostream>
 #include <string>

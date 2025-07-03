@@ -6,7 +6,7 @@
 /*   By: rlamlaik <rlamlaik@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/01 19:45:59 by rlamlaik          #+#    #+#             */
-/*   Updated: 2025/07/03 17:10:41 by rlamlaik         ###   ########.fr       */
+/*   Updated: 2025/07/03 18:17:51 by rlamlaik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 #include <iostream>
 #include <string>
 #include <cstring>
+#include <iomanip>
 
 class Contact
 {

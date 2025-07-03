@@ -6,7 +6,7 @@
 /*   By: rlamlaik <rlamlaik@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/01 18:11:37 by rlamlaik          #+#    #+#             */
-/*   Updated: 2025/07/03 17:09:46 by rlamlaik         ###   ########.fr       */
+/*   Updated: 2025/07/03 19:22:57 by rlamlaik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,33 +14,37 @@
 
 void Contact::set_contat()
 {
-    std::cout << "entre your name: " << std::endl;
+    std::cout << "entre your name: ";
     if (!getline(std::cin, name))
-        return ;
-    std::cout << "entre your last name: " << std::endl;
+        exit(1) ;
+    std::cout << "entre your last name: ";
     if (!getline(std::cin, last_name))
-        return ;
-    std::cout << "entre your nickname: " << std::endl;
+        exit(1) ;
+    std::cout << "entre your nickname: ";
     if (!getline(std::cin, nick_name))
-        return ;
-    std::cout << "entre your number: " << std::endl;
+        exit(1) ;
+    std::cout << "entre your number: ";
     if (!getline(std::cin, phone_number))
-        return ;
-    std::cout << "entre your secret: " << std::endl;
+        exit(1) ;
+    std::cout << "entre your secret: ";
     if (!getline(std::cin, the_secret))
-        return ;
+        exit(1) ;
 };
 
 void Contact::display_short_lst(int index)
 {
-    std::cout << "|" << name << "|" << std::endl;
-    return;
+    std::cout << std::setw(10) << std::right << index << "|";
+    std::cout << std::setw(10) << std::right << name << "|";
+    std::cout << std::setw(10) << std::right << last_name << "|";
+    std::cout << std::setw(10) << std::right << nick_name << "|";
+    std::cout << std::setw(10) << std::right << phone_number << "|";
+    std::cout << std::setw(10) << std::right << the_secret << std::endl;
 }
 
 void PhoneBook::add_contact()
 {
     contact[index].set_contat();
-    index = (index + 1) % 8; // to have in cyrcular in i
+    index = (index + 1) % 8;
     if (count_contact < 8)
         count_contact++;
     return ;
@@ -49,8 +53,7 @@ void PhoneBook::add_contact()
 void PhoneBook::search_contact()
 {
     std::cout << "sort list " << std::endl;
-    for(int i = 0; i < count_contact  ; i++)
-        contact[i].display_short_lst(count_contact);
+    contact[0].display_short_lst(count_contact);
     return ;
 }
 
