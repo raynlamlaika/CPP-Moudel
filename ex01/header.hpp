@@ -6,7 +6,7 @@
 /*   By: rlamlaik <rlamlaik@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/01 19:45:59 by rlamlaik          #+#    #+#             */
-/*   Updated: 2025/07/02 17:01:57 by rlamlaik         ###   ########.fr       */
+/*   Updated: 2025/07/03 17:10:41 by rlamlaik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,28 +19,32 @@
 
 class Contact
 {
-    private:
-        std::string name;
-        std::string lastname;
-        std::string nickname;
-        std::string number;
-        std::string secret;
-    public:
-        void set_contact();
-        void print_contacts();
-        std::string get_name() const;
-        void print_contacts() const;
+	private:
+		std::string name;
+		std::string last_name;
+		std::string nick_name;
+		std::string phone_number;
+		std::string the_secret;
+	public:
+		void		set_contat();
+		void		display_contact();
+		void		display_short_lst(int index);
+		std::string get_name();
 };
 
-class Phonebook
+class  PhoneBook
 {
-    private:
-        Contact contact[8];
-        int     contacts;
-    public:
-        Phonebook();
-        void add_contact();
-        void  search_contact();
+	private:
+		Contact	contact[8];
+		int		index = 0;
+		int		count_contact = 0;
+	public:
+		// PhoneBook();
+		void add_contact();
+		void search_contact();
+		void display_all();
+		// ~PhoneBook();
 };
+
 
 #endif
