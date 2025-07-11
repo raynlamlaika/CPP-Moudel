@@ -6,7 +6,7 @@
 /*   By: rlamlaik <rlamlaik@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/01 18:11:37 by rlamlaik          #+#    #+#             */
-/*   Updated: 2025/07/03 19:22:57 by rlamlaik         ###   ########.fr       */
+/*   Updated: 2025/07/11 16:05:07 by rlamlaik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,16 +44,18 @@ void Contact::display_short_lst(int index)
 void PhoneBook::add_contact()
 {
     contact[index].set_contat();
-    index = (index + 1) % 8;
-    if (count_contact < 8)
+    index = (index + 1) % 2;
+    if (count_contact < 2)
         count_contact++;
     return ;
 };
 
 void PhoneBook::search_contact()
 {
-    std::cout << "sort list " << std::endl;
-    contact[0].display_short_lst(count_contact);
+    for (int index = 0 ; index < count_contact ; index++)
+    {
+        contact[index].display_short_lst(index);
+    }
     return ;
 }
 
@@ -68,8 +70,8 @@ int main()
         std::cout << "phone Book input: ";
         if (!std::getline(std::cin, line))
         {
-            std::cout << "phonebook :nullptr detected" << std::endl ;
-            continue ;
+            std::cout << "      :nullptr detected" << std::endl ;
+            exit (1);
         }
         if (line == "ADD")
             phone.add_contact();

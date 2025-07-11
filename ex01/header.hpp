@@ -6,7 +6,7 @@
 /*   By: rlamlaik <rlamlaik@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/01 19:45:59 by rlamlaik          #+#    #+#             */
-/*   Updated: 2025/07/03 18:17:51 by rlamlaik         ###   ########.fr       */
+/*   Updated: 2025/07/11 15:35:20 by rlamlaik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,16 +36,16 @@ class Contact
 class  PhoneBook
 {
 	private:
-		Contact	contact[8];
+		Contact	contact[2];
 		int		index = 0;
 		int		count_contact = 0;
 	public:
-		// PhoneBook();
 		void add_contact();
 		void search_contact();
 		void display_all();
-		// ~PhoneBook();
 };
+
+
 
 
 #endif
