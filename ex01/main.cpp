@@ -6,17 +6,33 @@
 /*   By: rlamlaik <rlamlaik@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/01 18:11:37 by rlamlaik          #+#    #+#             */
-/*   Updated: 2025/07/11 16:05:07 by rlamlaik         ###   ########.fr       */
+/*   Updated: 2025/07/11 16:37:33 by rlamlaik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "header.hpp"
 
+int check_line(std::string line)
+{
+    
+    int i = 0;
+    while  (line[i])
+    {
+        if  (!isprint(line[i]))
+        {
+            std::cout << "INVALID LINE PASSED, MAKE IN CLEAN INPUT" << std::endl ;
+            return (0);
+        }
+        i++;
+    }
+    return (1);
+}
+
 void Contact::set_contat()
 {
     std::cout << "entre your name: ";
-    if (!getline(std::cin, name))
-        exit(1) ;
+    if (!getline(std::cin, name) || check_line(name) == 0)
+        exit(1);
     std::cout << "entre your last name: ";
     if (!getline(std::cin, last_name))
         exit(1) ;
@@ -65,22 +81,28 @@ int main()
 
     std::string line;
 
-    while (3310)
+    while ("l3ami9")
     {
         std::cout << "phone Book input: ";
         if (!std::getline(std::cin, line))
         {
-            std::cout << "      :nullptr detected" << std::endl ;
+            std::cout << "\nnullptr detected" << std::endl ;
             exit (1);
         }
-        if (line == "ADD")
-            phone.add_contact();
-        else if (line == "SEARCH")
-            phone.search_contact();
-        else if (line == "EXIT")
-            break ;
-        else
-            continue;
+        if (check_line(line))
+        {
+            if (line == "ADD")
+                phone.add_contact();
+            else if (line == "SEARCH")
+                phone.search_contact();
+            else if (line == "EXIT")
+                break ;
+            else
+            {
+                std::cout << "valid args is : ADD, SEARSH, EXIT" << std::endl;
+                continue;
+            }
+        }
     }
     return (0);
 } 
