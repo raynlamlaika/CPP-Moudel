@@ -1,29 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   megaphone.cpp                                      :+:      :+:    :+:   */
+/*   Account.cpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rlamlaik <rlamlaik@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/01 14:49:28 by rlamlaik          #+#    #+#             */
-/*   Updated: 2025/07/04 03:13:10 by rlamlaik         ###   ########.fr       */
+/*   Created: 2025/07/11 16:07:01 by rlamlaik          #+#    #+#             */
+/*   Updated: 2025/07/11 17:40:08 by rlamlaik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
-#include <string>
+#include "Account.hpp"
 
-int main(int ac, char**av)
+int main ()
 {
-    if (ac == 1)
-        std::cout<<"* LOUD AND UNBEARABLE FEEDBACK NOISE *" << std::endl;
-    for (int i = 1 ; av[i] ; i++)
-    {
-        std::string str;
-        for(int j = 0; av[i][j];j++)
-            str += std::toupper(av[i][j]);./
-        std::cout<< str;
-    }
-    std::cout << std::endl;
-    return (0);
+    
+    
 }
