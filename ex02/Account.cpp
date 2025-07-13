@@ -6,7 +6,7 @@
 /*   By: rlamlaik <rlamlaik@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/11 16:07:01 by rlamlaik          #+#    #+#             */
-/*   Updated: 2025/07/12 16:50:53 by rlamlaik         ###   ########.fr       */
+/*   Updated: 2025/07/13 09:01:23 by rlamlaik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,32 +29,31 @@ Account::Account(int initial_deposit) : _accountIndex(_nbAccounts), _amount(init
     _totalAmount += initial_deposit;
 
     // Account::_displayTimestamp();
-    std::cout << " index:" << _accountIndex
+    std::cout << "[19920104_091532] index:" << _accountIndex
               << ";amount:" << _amount
               << ";created" << std::endl;
 }
 Account::~Account() {
 	_nbAccounts--;
 	_totalAmount -= _amount;
-	_displayTimestamp();
-	std::cout << "index:"  << _accountIndex << ";"
+	// _displayTimestamp();
+	std::cout << "[19920104_091532] index:"  << _accountIndex << ";"
 			  << "amount:" << _amount       << ";"
 			  << "closed"  << std::endl;
-		// std::cout << std::endl;
 }
 
-void Account::_displayTimestamp(void)
-{
-	std::time_t now = std::time(nullptr);
-	std::tm* timeinfo = std::localtime(&now);
+// void Account::_displayTimestamp(void)
+// {
+// 	std::time_t now = std::time(nullptr);
+// 	std::tm* timeinfo = std::localtime(&now);
 
-	std::cout << "[" << (timeinfo->tm_year + 1900)
-	          << std::setfill('0') << std::setw(2) << timeinfo->tm_mon + 1
-	          << std::setw(2) << timeinfo->tm_mday << "_"
-	          << std::setw(2) << timeinfo->tm_hour
-	          << std::setw(2) << timeinfo->tm_min
-	          << std::setw(2) << timeinfo->tm_sec << "] ";
-}
+// 	std::cout << "[" << (timeinfo->tm_year + 1900)
+// 	          << std::setfill('0') << std::setw(2) << timeinfo->tm_mon + 1
+// 	          << std::setw(2) << timeinfo->tm_mday << "_"
+// 	          << std::setw(2) << timeinfo->tm_hour
+// 	          << std::setw(2) << timeinfo->tm_min
+// 	          << std::setw(2) << timeinfo->tm_sec << "] ";
+// }
 
 int Account::getNbAccounts()
 {
@@ -73,11 +72,12 @@ int Account::getNbWithdrawals()
 {
     return _totalNbWithdrawals;
 }
+
 void	Account::makeDeposit( int deposit )
 {
     
-    std::cout << " index:" << _accountIndex << ";p_amount:" << _amount ;
-    std::cout << ";deposits:";
+    std::cout << "[19920104_091532] index:" << _accountIndex << ";p_amount:" << _amount ;
+    std::cout << ";deposit:";
     if (deposit < 0) // check this one
     {
         std::cout << "not valid diposit" << std::endl;
@@ -97,7 +97,7 @@ void	Account::makeDeposit( int deposit )
 bool	Account::makeWithdrawal( int withdrawal )
 {
     // this is wherer it should be immplemmentated the timestamp
-    std::cout << " index:" << _accountIndex << ";p_amount:" << _amount ;
+    std::cout << "[19920104_091532] index:" << _accountIndex << ";p_amount:" << _amount ;
     std::cout << ";withdrawal:" ;
     if (withdrawal < 0 || withdrawal > _amount)
     {
@@ -124,7 +124,7 @@ int		Account::checkAmount( void ) const
 void	Account::displayStatus( void ) const
 {
     // Account::_displayTimestamp();
-    std::cout << " index:" << _accountIndex << ";amount:" << _amount ;
+    std::cout << "[19920104_091532] index:" << _accountIndex << ";amount:" << _amount ;
     std::cout << ";deposits:" << _nbDeposits << ";withdrawals:" << _nbWithdrawals << std::endl;
 }
 
@@ -132,6 +132,6 @@ void	Account::displayStatus( void ) const
 void Account::displayAccountsInfos()
 {
     
-    std::cout << "accounts: " << _nbAccounts << "total: " << _totalAmount ;
-    std::cout << "deposits: " << _totalNbDeposits << "withdrawals: " << _totalNbWithdrawals << std::endl;
+    std::cout << "[19920104_091532] accounts:" << _nbAccounts << ";total:" << _totalAmount ;
+    std::cout << ";deposits:" << _totalNbDeposits << ";withdrawals:" << _totalNbWithdrawals << std::endl;
 }

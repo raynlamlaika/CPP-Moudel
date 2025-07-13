@@ -6,7 +6,7 @@
 /*   By: rlamlaik <rlamlaik@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/01 14:49:28 by rlamlaik          #+#    #+#             */
-/*   Updated: 2025/07/04 03:13:10 by rlamlaik         ###   ########.fr       */
+/*   Updated: 2025/07/11 17:54:25 by rlamlaik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int main(int ac, char**av)
     {
         std::string str;
         for(int j = 0; av[i][j];j++)
-            str += std::toupper(av[i][j]);./
+            str += std::toupper(av[i][j]);
         std::cout<< str;
     }
     std::cout << std::endl;
