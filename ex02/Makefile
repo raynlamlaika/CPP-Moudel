@@ -2,10 +2,10 @@ NAME = program
 
 SRC = test.cpp Account.cpp
 
-OBJ = $(SRC:.c=.o)
+OBJ = $(SRC:.cpp=.o)
 
 CPP = c++
-CFLAGS = -Wall -Werror -Wextra
+# CFLAGS = -Wall -Werror -Wextra
 
 HEADER = Account.hpp
 

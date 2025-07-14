@@ -2,7 +2,7 @@ NAME = PhoneBook
 
 SRC = main.cpp
 
-OBJ = $(SRC:.c=.o)
+OBJ = $(SRC:.cpp=.o)
 
 CPP = c++
 CFLAGS = -Wall -Werror -Wextra
@@ -26,3 +26,4 @@ fclean: clean
 	rm -f $(NAME)
 
 re: fclean all
+
