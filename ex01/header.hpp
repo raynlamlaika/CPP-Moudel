@@ -6,7 +6,7 @@
 /*   By: rlamlaik <rlamlaik@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/01 19:45:59 by rlamlaik          #+#    #+#             */
-/*   Updated: 2025/07/11 15:35:20 by rlamlaik         ###   ########.fr       */
+/*   Updated: 2025/07/14 11:13:27 by rlamlaik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ class Contact
 		std::string the_secret;
 	public:
 		void		set_contat();
-		void		display_contact();
+		// void		display_contact();
 		void		display_short_lst(int index);
 		std::string get_name();
 };
@@ -37,12 +37,13 @@ class  PhoneBook
 {
 	private:
 		Contact	contact[2];
-		int		index = 0;
-		int		count_contact = 0;
+		int		index;
+		int		count_contact ;
 	public:
+		PhoneBook();
 		void add_contact();
 		void search_contact();
-		void display_all();
+		// void display_all();
 };
 
 

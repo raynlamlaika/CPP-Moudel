@@ -5,7 +5,7 @@ SRC = main.cpp
 OBJ = $(SRC:.cpp=.o)
 
 CPP = c++
-CFLAGS = -Wall -Werror -Wextra
+CFLAGS = -Wall -Werror -Wextra -std=c++98
 
 HEADER = header.hpp
 
