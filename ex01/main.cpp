@@ -85,8 +85,8 @@ void Contact::display_short_lst(int index)
 void PhoneBook::add_contact()
 {
     contact[index].set_contat();
-    index = (index + 1) % 2;
-    if (count_contact < 2)
+    index = (index + 1) % 8;
+    if (count_contact < 8)
         count_contact++;
     return ;
 };
@@ -144,8 +144,6 @@ int main()
     PhoneBook phone;
 
     std::string line;
-
-
     while ("l3ami9")
     {
         std::cout << "phone Book input: ";

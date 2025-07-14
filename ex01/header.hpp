@@ -28,7 +28,7 @@ class Contact
 		std::string the_secret;
 	public:
 		void		set_contat();
-		// void		display_contact();
+		void		display_contact();
 		void		display_short_lst(int index);
 		std::string get_name();
 };
@@ -36,7 +36,7 @@ class Contact
 class  PhoneBook
 {
 	private:
-		Contact	contact[2];
+		Contact	contact[8];
 		int		index;
 		int		count_contact ;
 	public:

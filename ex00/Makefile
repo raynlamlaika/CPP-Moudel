@@ -6,7 +6,7 @@ SRC = megaphone.cpp
 OBJ = $(SRC:.cpp=.o)
 
 CPP = c++
-CFLAGS = -Wall -Werror -Wextra
+CFLAGS = -Wall -Werror -Wextra -std=c++98
 
 all: $(NAME)
 
