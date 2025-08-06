@@ -1,21 +1,20 @@
-NAME = PhoneBook
+NAME = helo
 
-SRC = Contact.cpp Phonebook.cpp main.cpp
+SRC = main.cpp  Weapon.cpp  HumanA.cpp HumanB.cpp 
 
 OBJ = $(SRC:.cpp=.o)
 
 CPP = c++
-CFLAGS = -Wall -Werror -Wextra -std=c++98
+CFLAGS = -Wall -Werror -Wextra -std=c++98 -Iincludes
 
-HEADER = Contact.hpp PhoneBook.hpp
-
+HEADRES = Weapon.hpp HumanA.hpp HumanB.hpp
 all: $(NAME)
 
 $(NAME): $(OBJ)
 	$(CPP)  $(CFLAGS) $^ -o $(NAME)
 
 
-%.o: %.cpp $(HEADER)
+%.o: %.cpp $(HEADRES)
 	$(CPP)  $(CFLAGS) -c $< -o $@
 
 
@@ -26,4 +25,3 @@ fclean: clean
 	rm -f $(NAME)
 
 re: fclean all
-

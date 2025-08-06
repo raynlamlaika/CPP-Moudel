@@ -1,21 +1,21 @@
-NAME = PhoneBook
+NAME = harl
 
-SRC = Contact.cpp Phonebook.cpp main.cpp
+SRC = Harl.cpp main.cpp 
 
 OBJ = $(SRC:.cpp=.o)
 
 CPP = c++
-CFLAGS = -Wall -Werror -Wextra -std=c++98
 
-HEADER = Contact.hpp PhoneBook.hpp
+CFLAGS = -Wall -Werror -Wextra -std=c++98 -Iincludes
 
+HEADRES = Harl.hpp
 all: $(NAME)
 
 $(NAME): $(OBJ)
 	$(CPP)  $(CFLAGS) $^ -o $(NAME)
 
 
-%.o: %.cpp $(HEADER)
+%.o: %.cpp $(HEADRES)
 	$(CPP)  $(CFLAGS) -c $< -o $@
 
 
@@ -26,4 +26,3 @@ fclean: clean
 	rm -f $(NAME)
 
 re: fclean all
-

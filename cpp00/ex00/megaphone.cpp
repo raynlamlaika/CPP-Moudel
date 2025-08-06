@@ -16,13 +16,21 @@
 int main(int ac, char**av)
 {
     if (ac == 1)
+    {
         std::cout<<"* LOUD AND UNBEARABLE FEEDBACK NOISE *" << std::endl;
+        return (1);
+    }
     for (int i = 1 ; av[i] ; i++)
     {
         std::string str;
         for(int j = 0; av[i][j];j++)
             str += std::toupper(av[i][j]);
         std::cout<< str;
+    }
+    while (1)
+    {
+        int a;
+        
     }
     std::cout << std::endl;
     return (0);

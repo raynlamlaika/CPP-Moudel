@@ -10,12 +10,12 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef HEADER_HPP
-# define HEADER_HPP
+#ifndef CONTACT_HPP
+# define CONTACT_HPP
+
 
 #include <iostream>
 #include <string>
-#include <cstring>
 #include <iomanip>
 
 class Contact
@@ -30,23 +30,11 @@ class Contact
 		void		set_contat();
 		void		display_contact();
 		void		display_short_lst(int index);
+		void		display_cntct(int index);
 		std::string get_name();
 };
 
-class  PhoneBook
-{
-	private:
-		Contact	contact[8];
-		int		index;
-		int		count_contact ;
-	public:
-		PhoneBook();
-		void add_contact();
-		void search_contact();
-		// void display_all();
-};
-
-
+int check_line(std::string line);
 
 
 #endif

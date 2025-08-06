@@ -3,9 +3,7 @@
 
 int main()
 {
-    Zombie First;
 
-    First.set_name("rayn");
-    First.announce();
+    randomChump("helo");
     return 0;
 }

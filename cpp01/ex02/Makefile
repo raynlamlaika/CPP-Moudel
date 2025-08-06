@@ -1,13 +1,11 @@
-NAME = PhoneBook
+NAME = Ptr
 
-SRC = Contact.cpp Phonebook.cpp main.cpp
+SRC = main.cpp
 
 OBJ = $(SRC:.cpp=.o)
 
 CPP = c++
 CFLAGS = -Wall -Werror -Wextra -std=c++98
-
-HEADER = Contact.hpp PhoneBook.hpp
 
 all: $(NAME)
 
@@ -15,7 +13,7 @@ $(NAME): $(OBJ)
 	$(CPP)  $(CFLAGS) $^ -o $(NAME)
 
 
-%.o: %.cpp $(HEADER)
+%.o: %.cpp
 	$(CPP)  $(CFLAGS) -c $< -o $@
 
 
