@@ -27,7 +27,7 @@ class Contact
 		std::string phone_number;
 		std::string the_secret;
 	public:
-		void		set_contat();
+		int		set_contat();
 		void		display_contact();
 		void		display_short_lst(int index);
 		void		display_cntct(int index);

@@ -11,10 +11,13 @@
 /* ************************************************************************** */
 
 #include "PhoneBook.hpp"
+#include <sstream>
 
 void PhoneBook::add_contact()
 {
-    contact[index].set_contat();
+    int i = contact[index].set_contat();
+    if (i == 0)
+        return ;
     index = (index + 1) % 8;
     if (count_contact < 8)
         count_contact++;
@@ -55,7 +58,9 @@ void PhoneBook::search_contact()
             return ;
         }
     }
-    int index_c = atoi(input_s);
+    int index_c;
+    std::istringstream iss(input_s);
+    iss >> index_c;
     if (index_c > count_contact || index_c > 8 || index_c < 0 )
     {
         std::cout << "invalid index " <<  std::endl;
