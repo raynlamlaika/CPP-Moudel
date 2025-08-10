@@ -44,11 +44,6 @@ int Contact::set_contat()
     std::cout << "entre your number: ";
     if (!getline(std::cin, phone_number) || check_line(phone_number) == 0 )
         return 0;
-    // for (int i = 0; phone_number[i]; i++)
-    // {
-    //     if (!std::isdigit(phone_number[i]))
-    //         return 0;
-    // }
     std::cout << "entre your secret: ";
     if (!getline(std::cin, the_secret) || check_line(the_secret) == 0)
         return 0;
@@ -59,6 +54,7 @@ std::string Contact::get_name()
 {
     return name;
 }
+
 void Contact::display_short_lst(int index)
 {
     if (index == 0)
@@ -68,7 +64,6 @@ void Contact::display_short_lst(int index)
         std::cout << std::setw(10) << "Last Name" << "|";
         std::cout << std::setw(10) << "Nickname" << "|" << std::endl;
     }
-    
 
     std::cout << std::setw(10) << index << "|";
     if (name.length() > 10)
@@ -94,11 +89,11 @@ void Contact::display_cntct(int index)
         return ;
     }
         
-    std::cout <<"Index :" << index << std::endl;;
-    std::cout <<"First Name :" << name << std::endl;;
-    std::cout <<"Last Name :" << last_name << std::endl;;
-    std::cout <<"Nickname :" << nick_name << std::endl;
-    std::cout <<"phone_number :" << nick_name << std::endl;
-    std::cout <<"Nickname :" << nick_name << std::endl;
+    std::cout << "Index :" << index << std::endl;;
+    std::cout << "First Name :" << name << std::endl;;
+    std::cout << "Last Name :" << last_name << std::endl;;
+    std::cout << "Nickname :" << nick_name << std::endl;
+    std::cout << "phone_number :" << nick_name << std::endl;
+    std::cout << "secret :" << the_secret << std::endl;
 
 }

@@ -27,11 +27,6 @@ int main(int ac, char**av)
             str += std::toupper(av[i][j]);
         std::cout<< str;
     }
-    while (1)
-    {
-        int a;
-        
-    }
     std::cout << std::endl;
     return (0);
 }
