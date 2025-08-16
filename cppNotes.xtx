@@ -1,0 +1,4 @@
+the memo allocation in cpp
+is kaynda like c 
+the sptes taht is passed in cpp
+is :  new → malloc → (brk/mmap syscalls) and after that new call the constructure

@@ -5,21 +5,22 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: rlamlaik <rlamlaik@student.42.fr>          #+#  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025-08-15 09:18:33 by rlamlaik          #+#    #+#             */
-/*   Updated: 2025-08-15 09:18:33 by rlamlaik         ###   ########.fr       */
+/*   Created: 2025-08-15 09:25:02 by rlamlaik          #+#    #+#             */
+/*   Updated: 2025-08-15 09:25:02 by rlamlaik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Harl.hpp"
+#include <iostream>
+#include "Fixed.hpp"
 
-
-
-int main()
+int main( void )
 {
-
-    Harl helo;
-
-    helo.complain("ERROR");
-
-    return (1);
+    Fixed a;
+    Fixed b(a);
+    Fixed c;
+    c = b;
+    std::cout << a.getRawBits() << std::endl;
+    std::cout << b.getRawBits() << std::endl;
+    std::cout << c.getRawBits() << std::endl;
+    return 0;
 }
