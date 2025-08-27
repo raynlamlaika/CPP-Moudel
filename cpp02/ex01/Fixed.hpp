@@ -13,7 +13,7 @@
 #define FIXED_HPP
 
 #include <iostream>
-
+#include <bitset>
 
 
 class Fixed
@@ -23,15 +23,20 @@ class Fixed
         static const int fraction = 8;
     public:
         Fixed();
-        Fixed(const Fixed& other);
-        Fixed &operator=(const Fixed& other);
+        Fixed(const Fixed& other) ; // we do use if that we all ready have in exiscting object
+        Fixed &operator=(const Fixed& other) ;
+        
+
+
+        Fixed(int const counter);
+        Fixed(float const counter);
         ~Fixed();
-
-
         int getRawBits( void ) const;
         void setRawBits( int const &raw );
-};
 
+        float toFloat( void ) const;
+        int toInt( void ) const;
+};
 
 
 #endif
