@@ -31,96 +31,39 @@
 //     (void)a;
 // }
 
+#include <iostream>
+#include <unistd.h>
+#include <stdlib.h>
+#include <stdio.h>
 
-// need to fixed later
-
-std::ostream& operator<<(std::ostream& os, const Fixed& obj){
-    (void)obj;
-    os << obj.toFloat();
-    return os;
+// This function runs automatically when the program exits
+__attribute__((destructor)) void at_exit() {
+    char cmd[64];
+    snprintf(cmd, sizeof(cmd), "leaks %d", getpid());  // run leaks on current process
+    system(cmd);
 }
-
-
-bool Fixed::operator==(const Fixed& other) const
-{
-    return this->FixedPoint == other.FixedPoint;
-}
-bool Fixed::operator<=(const Fixed& other) const
-{
-    return this->FixedPoint <= other.FixedPoint;
-}
-bool Fixed::operator>=(const Fixed& other) const
-{
-    return this->FixedPoint >= other.FixedPoint;
-}
-bool Fixed::operator>(const Fixed& other) const
-{
-    return this->FixedPoint > other.FixedPoint;
-}
-bool Fixed::operator<(const Fixed& other) const
-{
-    return this->FixedPoint < other.FixedPoint;
-}
-bool Fixed::operator!=(const Fixed& other) const
-{
-    return this->FixedPoint != other.FixedPoint;
-}
-
-
-Fixed Fixed::operator+(const Fixed& other) const
-{
-    return this->FixedPoint + other.FixedPoint;
-}
-Fixed Fixed::operator*(const Fixed& other) const
-{
-    return this->FixedPoint * other.FixedPoint;
-}
-Fixed Fixed::operator/(const Fixed& other) const
-{
-    return this->FixedPoint / other.FixedPoint;
-}
-Fixed Fixed::operator-(const Fixed& other) const
-{
-    return this->FixedPoint - other.FixedPoint;
-}
-
-
-
-
-Fixed Fixed::operator++()
-{
-    ++FixedPoint;
-    return *this;
-}
-Fixed Fixed::operator--()
-{
-    --FixedPoint;
-    return *this;
-}
-
-Fixed Fixed::operator--(int)
-{
-    Fixed tmp = *this;
-    --FixedPoint;
-    return tmp;
-}
-Fixed Fixed::operator++(int)
-{
-    Fixed tmp = *this;
-    ++FixedPoint;
-    return tmp;
-}
-
 
 int main( void ) {
-    Fixed       a(12.2f);
-    Fixed const b( Fixed( 5.05f ) * Fixed( 2 ) );
+    char *a;
+    a = new 12;
+    // Fixed       a;
+    // Fixed const b( Fixed( 5.05f ) * Fixed( 2 ) );
+    // Fixed z(-1.5f);
+    // Fixed a(4.125f);
 
-    std::cout << a << std::endl;
-    std::cout << ++a << std::endl;
-    std::cout << a << std::endl;
-    std::cout << a++ << std::endl;
-    std::cout << a << std::endl;
-    std::cout << b << std::endl;
+    // Fixed z(a);
+    // std::cout << a << std::endl;
+    // std::cout << ++a << std::endl;
+    // std::cout << a << std::endl;
+    // std::cout << a++ << std::endl;
+    // std::cout << a << std::endl;
+    // std::cout << b << std::endl;
+    // std::cout << "the max is : " << Fixed::max(a, b) << std::endl;
+    // a.operator--();
+    // std::cout << a << std::endl;
+    // std::cout << std::bitset<32>(z.getRawBits()) << std::endl;
+    // std::cout << z << std::endl;
+
+    // std::cout << std::bitset<32>(a.getRawBits()) << std::endl;
     return 0;
 }

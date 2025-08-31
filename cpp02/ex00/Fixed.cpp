@@ -1,3 +1,14 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Fixed.cpp                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: rlamlaik <rlamlaik@student.42.fr>          #+#  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025-08-31 10:35:34 by rlamlaik          #+#    #+#             */
+/*   Updated: 2025-08-31 10:35:34 by rlamlaik         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 /*
 from now we will always use 
@@ -5,7 +16,6 @@ from now we will always use
 • Copy constructor
 • Copy assignment operator
 • Destructor
-
 */
 
 

@@ -9,6 +9,7 @@
 /*   Updated: 2025-08-15 09:48:58 by rlamlaik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #ifndef FIXED_HPP
 #define FIXED_HPP
 
@@ -19,12 +20,12 @@
 class Fixed
 {
     private:
-        int FixedPoint;
-        static const int fraction = 8;
+        int                 FixedPoint;
+        static const int    fraction  = 8;
     public:
         Fixed();
         Fixed(const Fixed& other) ; // we do use if that we all ready have in exiscting object
-        Fixed &operator=(const Fixed& other) ;
+        Fixed &operator=(const Fixed& other);
         Fixed(int const counter);
         Fixed(float const counter);
         ~Fixed();
@@ -40,6 +41,7 @@ class Fixed
         bool operator<(const Fixed& other) const;
         bool operator>(const Fixed& other) const;
         bool operator!=(const Fixed& other) const;
+        // std::ostream& operator<<(std::ostream& os, const Fixed& obj);
 
 
 
@@ -48,15 +50,15 @@ class Fixed
         Fixed operator*(const Fixed& other) const;
         Fixed operator-(const Fixed& other) const;
 
-        Fixed operator++();
-        Fixed operator--();
+        Fixed &operator++();
+        Fixed &operator--();
         Fixed operator--(int);
         Fixed operator++(int);
 
-        Fixed min(int &fixedPoint1, int fixedPoint2);
-        Fixed min(int const &fixedPoint1, int const &fixedPoint2);
-        Fixed max(int &fixedPoint1, int &fixedPoint2);
-        Fixed max(const int &fixedPoint1, const int &fixedPoint2);
+        static Fixed &min(Fixed &fixedPoint1, Fixed &fixedPoint2);
+        static Fixed &max(Fixed &fixedPoint1, Fixed &fixedPoint2);
+        static const Fixed &min(Fixed const &fixedPoint1, Fixed const &fixedPoint2);
+        static const Fixed &max(Fixed const &fixedPoint1, Fixed const &fixedPoint2);
 
 };
 

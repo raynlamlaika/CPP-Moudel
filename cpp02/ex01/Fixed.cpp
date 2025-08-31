@@ -1,3 +1,14 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Fixed.cpp                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: rlamlaik <rlamlaik@student.42.fr>          #+#  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025-08-31 10:36:50 by rlamlaik          #+#    #+#             */
+/*   Updated: 2025-08-31 10:36:50 by rlamlaik         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 /*
 from now we will always use 
@@ -39,6 +50,12 @@ Fixed::Fixed(int const counter)
     FixedPoint = counter;
     FixedPoint <<= fraction;
     std::cout << "Int constructor called" << std::endl;
+}
+
+std::ostream &Fixed::operator<<(std::ostream& os, const Fixed& obj)
+{
+    os << obj.toFloat();
+    return os;
 }
 
 void printBinary(int value) 

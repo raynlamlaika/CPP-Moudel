@@ -31,11 +31,6 @@
 //     (void)a;
 // }
 
-std::ostream& operator<<(std::ostream& os, const Fixed& obj){
-    (void)obj;
-    os << obj.toFloat();
-    return os;
-}
 
 
 int main( void ) {
@@ -52,5 +47,6 @@ int main( void ) {
     std::cout << "b is " << b.toInt() << " as integer" << std::endl;
     std::cout << "c is " << c.toInt() << " as integer" << std::endl;
     std::cout << "d is " << d.toInt() << " as integer" << std::endl;
+
     return 0;
 }

@@ -9,6 +9,7 @@
 /*   Updated: 2025-08-15 09:48:58 by rlamlaik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #ifndef FIXED_HPP
 #define FIXED_HPP
 
@@ -30,6 +31,8 @@ class Fixed
 
         Fixed(int const counter);
         Fixed(float const counter);
+        std::ostream& operator<<(std::ostream& os, const Fixed& obj);
+
         ~Fixed();
         int getRawBits( void ) const;
         void setRawBits( int const &raw );
