@@ -16,7 +16,6 @@
 #include <iostream>
 #include <bitset>
 
-
 class Fixed
 {
     private:
@@ -24,7 +23,7 @@ class Fixed
         static const int    fraction  = 8;
     public:
         Fixed();
-        Fixed(const Fixed& other) ; // we do use if that we all ready have in exiscting object
+        Fixed(const Fixed& other) ;
         Fixed &operator=(const Fixed& other);
         Fixed(int const counter);
         Fixed(float const counter);
@@ -41,7 +40,6 @@ class Fixed
         bool operator<(const Fixed& other) const;
         bool operator>(const Fixed& other) const;
         bool operator!=(const Fixed& other) const;
-        // std::ostream& operator<<(std::ostream& os, const Fixed& obj);
 
 
 
@@ -61,6 +59,8 @@ class Fixed
         static const Fixed &max(Fixed const &fixedPoint1, Fixed const &fixedPoint2);
 
 };
+
+std::ostream &operator<<(std::ostream& os, const Fixed& obj);
 
 
 #endif

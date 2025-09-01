@@ -31,7 +31,6 @@ class Fixed
 
         Fixed(int const counter);
         Fixed(float const counter);
-        std::ostream& operator<<(std::ostream& os, const Fixed& obj);
 
         ~Fixed();
         int getRawBits( void ) const;
@@ -41,5 +40,6 @@ class Fixed
         int toInt( void ) const;
 };
 
+std::ostream &operator<<(std::ostream& os, const Fixed& obj);
 
 #endif

@@ -15,7 +15,7 @@ Fixed::Fixed() : FixedPoint(0)
 {
 }
 
-Fixed::Fixed(const Fixed& other) : FixedPoint(other.getRawBits()) // we do use if that we all ready have in exiscting object
+Fixed::Fixed(const Fixed& other) : FixedPoint(other.getRawBits())
 {
 }
 
@@ -29,13 +29,13 @@ Fixed::~Fixed()
 {
 }
 
-// need to fixed later
+std::ostream &operator<<(std::ostream& os, const Fixed& obj)
+{
+    os << obj.toFloat();
+    return os;
+}
 
-// std::ostream &Fixed::operator<<(std::ostream& os, const Fixed& obj)
-// {
-//     os << obj.toFloat();
-//     return os;
-// }
+// need to fixed later
 
 bool Fixed::operator==(const Fixed& other) const
 {
@@ -80,12 +80,16 @@ Fixed Fixed::operator+(const Fixed& other) const
 // still nedd to improve
 Fixed Fixed::operator/(const Fixed& other) const
 {
-    return ((float)(this->FixedPoint / other.FixedPoint));
+    return ((float)((float)this->FixedPoint / (float)other.FixedPoint));
 }
 
 Fixed Fixed::operator*(const Fixed& other) const
 {
-    return ((float)(this->FixedPoint * other.FixedPoint) / (1 << fraction));
+    Fixed tmp;
+    long firs = other.FixedPoint;
+    long sec = this->FixedPoint;
+    tmp.setRawBits((sec * firs) / (1 << fraction));
+    return (tmp);
 }
 
 
@@ -125,21 +129,10 @@ void printBinary(int value)
     std::cout << std::bitset<sizeof(value) * 8 >(value) << std::endl;
 }
 
-
 Fixed::Fixed(float counter)
 {
-    // int i = counter; 
 
-    // float holder = (counter - i) + 1; // approximate fractional part
-    // int helper;
-    // std::memcpy(&helper, &holder, 4);        // copy float bits
-    // helper >>= 15;                            // shift to approximate fractional bits
-    // std::memset((char*)(&helper) + 1, 0, 3); // zero upper bytes
-
-    // i <<= 8;
-    // FixedPoint = i + helper;
-
-    int fixed = (int) roundf(counter * (1 << fraction)); // it return a float may need to CAST IT 
+    int fixed = (int) roundf(counter * (1 << fraction));
 
     FixedPoint = fixed;
 }
@@ -191,8 +184,6 @@ Fixed const &Fixed::min(Fixed const &fixedPoint1, Fixed const &fixedPoint2)
 
 Fixed const &Fixed::max(Fixed const &fixedPoint1, Fixed const &fixedPoint2)
 {
-    // float b = fixedPoint1.toInt();
-    // float a = fixedPoint2.toFloat();
     if (fixedPoint1 > fixedPoint2)
         return (fixedPoint1);
     return (fixedPoint2);

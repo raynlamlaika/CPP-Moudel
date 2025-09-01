@@ -13,24 +13,6 @@
 #include <iostream>
 #include "Fixed.hpp"
 
-// int main( void )
-// {
-//     // (void)ac;
-//     // Fixed a;
-//     // Fixed b(a);
-//     // Fixed c;
-//     // c = b;
-//     // std::cout << a.getRawBits() << std::endl;
-//     // std::cout << b.getRawBits() << std::endl;
-//     // b.setRawBits(4);
-//     // std::cout << b.getRawBits() << std::endl;
-//     // std::cout << c.getRawBits() << std::endl;
-//     // std::cout << av[100] << std::endl;
-//     // return 0;
-//     Fixed a(-3f);
-//     (void)a;
-// }
-
 
 
 int main( void ) {
@@ -50,3 +32,5 @@ int main( void ) {
 
     return 0;
 }
+
+
