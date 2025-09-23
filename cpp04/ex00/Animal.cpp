@@ -6,7 +6,7 @@
 /*   By: rlamlaik <rlamlaik@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/18 07:45:50 by rlamlaik          #+#    #+#             */
-/*   Updated: 2025/09/18 09:11:16 by rlamlaik         ###   ########.fr       */
+/*   Updated: 2025/09/23 17:42:49 by rlamlaik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,11 @@
 
 Animal::Animal()
 {
-    std::cout << "the constaractor is called" << std::endl;
+    std::cout << "Animal: the constaractor is called" << std::endl;
 }
 Animal::~Animal()
 {
-    std::cout << "the destractor is called" << std::endl;
+    std::cout << "Animal :the destractor is called" << std::endl;
 
 }
 Animal &Animal::operator=(const Animal &other)
@@ -37,14 +37,7 @@ Animal::Animal(const Animal& other)
     
 void Animal::makeSound() const
 {
-    if (this->type == "Dog")
-    {
-        std::cout << "wooooof" << std::endl;
-    }
-    else if (this->type == "cat")
-    {
-        std::cout << "meeeeaw" << std::endl;
-    }
+    std::cout << "another msg" << std::endl;
 }
 
 std::string Animal::getType() const

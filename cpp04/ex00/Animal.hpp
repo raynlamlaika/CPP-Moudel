@@ -6,7 +6,7 @@
 /*   By: rlamlaik <rlamlaik@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/18 06:44:35 by rlamlaik          #+#    #+#             */
-/*   Updated: 2025/09/18 09:20:18 by rlamlaik         ###   ########.fr       */
+/*   Updated: 2025/09/23 17:43:16 by rlamlaik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,14 +26,13 @@ protected:
 
 public:
     Animal();
-    
     Animal &operator=(const Animal &other);
     Animal(const Animal& other);
     virtual ~Animal();
     
     virtual void makeSound() const;
-    virtual void setType(std::string type);
-    virtual std::string getType() const;
+    void setType(std::string type);
+    std::string getType() const;
 
 };
 

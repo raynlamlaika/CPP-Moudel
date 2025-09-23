@@ -7,7 +7,7 @@ OBJ = $(SRC:.cpp=.o)
 CPP = c++
 CFLAGS = -Wall -Werror -Wextra -std=c++98
 
-HEADER = Animal.hpp  Cat.hpp  Dog.hpp
+HEADER = Animal.html  Cat.hpp  Dog.hpp
 
 all: $(NAME)
 

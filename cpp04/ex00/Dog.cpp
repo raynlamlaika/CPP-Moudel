@@ -6,7 +6,7 @@
 /*   By: rlamlaik <rlamlaik@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/18 08:00:37 by rlamlaik          #+#    #+#             */
-/*   Updated: 2025/09/18 09:11:39 by rlamlaik         ###   ########.fr       */
+/*   Updated: 2025/09/23 17:58:27 by rlamlaik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,7 @@ Dog &Dog::operator=(const Dog& other)
     return (*this);
 
 }
+
 Dog::Dog(const Dog& other): Animal(other)
 {
     this->type = other.type;

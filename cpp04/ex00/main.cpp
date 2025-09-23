@@ -6,7 +6,7 @@
 /*   By: rlamlaik <rlamlaik@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/18 06:43:28 by rlamlaik          #+#    #+#             */
-/*   Updated: 2025/09/18 09:30:40 by rlamlaik         ###   ########.fr       */
+/*   Updated: 2025/09/23 17:56:36 by rlamlaik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,8 +33,11 @@ int main()
     std::cout << j->getType() << " " << std::endl;
     std::cout << i->getType() << " " << std::endl;
 
-    i->makeSound(); //will output the cat sound!
-    j->makeSound();
-    meta->makeSound();
+    i->getType(); //will output the cat sound!
+    // j->makeSound();
+    // meta->makeSound();
+    delete i;
+    delete meta;
+    delete j;
     return 0;
 }
