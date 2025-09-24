@@ -6,7 +6,7 @@
 /*   By: rlamlaik <rlamlaik@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/18 07:55:45 by rlamlaik          #+#    #+#             */
-/*   Updated: 2025/09/23 17:58:02 by rlamlaik         ###   ########.fr       */
+/*   Updated: 2025/09/24 11:17:18 by rlamlaik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,7 @@
 
 Cat::Cat() : Animal()
 {
-    this->type = "cat";
-
+    this->type = "Cat";
     std::cout << "Cat : the constaractor is called" << std::endl;
 }
 
@@ -41,8 +40,8 @@ Cat::Cat(const Cat& other) : Animal(other)
     
 void Cat::makeSound() const
 {
-
     std::cout << "meeeeaw" << std::endl;
 
 }
+
 

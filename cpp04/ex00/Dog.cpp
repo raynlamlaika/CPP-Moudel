@@ -6,7 +6,7 @@
 /*   By: rlamlaik <rlamlaik@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/18 08:00:37 by rlamlaik          #+#    #+#             */
-/*   Updated: 2025/09/23 17:58:27 by rlamlaik         ###   ########.fr       */
+/*   Updated: 2025/09/24 12:18:10 by rlamlaik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,12 +15,12 @@
 
 Dog::Dog() : Animal()
 {
-    this->type = "dog";
+    this->type = "Dog";
     std::cout << "the constaractor is called" << std::endl;
 }
 Dog::~Dog()
 {
-    std::cout << "the destractor is called" << std::endl;
+    std::cout << "Dog: the destractor is called" << std::endl;
 
 }
 Dog &Dog::operator=(const Dog& other) 
