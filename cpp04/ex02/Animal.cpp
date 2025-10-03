@@ -6,7 +6,7 @@
 /*   By: rlamlaik <rlamlaik@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/18 07:45:50 by rlamlaik          #+#    #+#             */
-/*   Updated: 2025/09/24 11:10:03 by rlamlaik         ###   ########.fr       */
+/*   Updated: 2025/10/02 15:05:57 by rlamlaik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,11 +35,6 @@ Animal::Animal(const Animal& other)
     this->type = other.type;
 
     std::cout << "copy constaractor is called" << std::endl;
-}
-
-void Animal::makeSound() const
-{
-    std::cout << "need to spicify the animal to make in sound" << std::endl;
 }
 
 std::string Animal::getType() const

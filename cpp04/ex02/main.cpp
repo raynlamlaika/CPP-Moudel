@@ -6,7 +6,7 @@
 /*   By: rlamlaik <rlamlaik@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/18 06:43:28 by rlamlaik          #+#    #+#             */
-/*   Updated: 2025/09/24 14:22:35 by rlamlaik         ###   ########.fr       */
+/*   Updated: 2025/10/02 14:45:22 by rlamlaik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -112,6 +112,7 @@ int main()
     for (int i = 0; i < size; i++) {
         delete animals[i];
     }
+    
     delete j;
     delete i;
     return 0;

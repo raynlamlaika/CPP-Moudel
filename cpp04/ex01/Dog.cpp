@@ -6,7 +6,7 @@
 /*   By: rlamlaik <rlamlaik@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/18 08:00:37 by rlamlaik          #+#    #+#             */
-/*   Updated: 2025/09/24 14:07:37 by rlamlaik         ###   ########.fr       */
+/*   Updated: 2025/10/02 14:44:40 by rlamlaik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,6 +57,7 @@ std::string Dog::getType() const
 {
     return(this->type);
 }
+
 void Dog::setType(std::string type)
 {
     this->type = type;
