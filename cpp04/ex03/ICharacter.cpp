@@ -1,37 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Ice.hpp                                            :+:      :+:    :+:   */
+/*   ICharacter.cpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rlamlaik <rlamlaik@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/02 15:13:13 by rlamlaik          #+#    #+#             */
-/*   Updated: 2025/10/06 00:37:20 by rlamlaik         ###   ########.fr       */
+/*   Created: 2025/10/06 00:37:52 by rlamlaik          #+#    #+#             */
+/*   Updated: 2025/10/06 00:40:23 by rlamlaik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ICE_HPP
-# define ICE_HPP
 
-#include "AMateria.hpp"
+#include "ICharacter.hpp"
 
-class Ice : public AMateria
+
+
+
+
+
+ICharacter::ICharacter (const ICharacter& other)
 {
-private:
-    std::string name;
+    std::cout << "ICharacter: the constaractor is called" << std::endl;
+    
+}
+ICharacter::~ICharacter()
+{
+    std::cout << "ICharacter: the destractor is called" << std::endl;
+    
+}
+ICharacter::ICharacter(std::string const & type)
+{
+    
+}
+ICharacter &ICharacter::operator=(const ICharacter &other)
+{
+    
+}
 
-protected:
-
-
-public:
-    Ice(std::string const & type);
-    Ice &operator=(const Ice &other);
-    Ice (const Ice& other);
-    ~Ice();
-
-    virtual AMateria* clone() const;
-    void use(ICharacter& target);
-};
-
-
-#endif

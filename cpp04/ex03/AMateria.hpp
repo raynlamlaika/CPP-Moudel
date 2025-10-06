@@ -6,16 +6,17 @@
 /*   By: rlamlaik <rlamlaik@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/02 15:13:13 by rlamlaik          #+#    #+#             */
-/*   Updated: 2025/10/03 15:16:20 by rlamlaik         ###   ########.fr       */
+/*   Updated: 2025/10/06 02:37:23 by rlamlaik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef AMATERIA
-# define AMATERIA
+#ifndef AMATERIA_HPP
+# define AMATERIA_HPP
 
 class ICharacter;
 #include <iostream>
-
+#include "Character.hpp"
+#include "ICharacter.hpp"
 class AMateria
 {
 protected:
