@@ -7,7 +7,7 @@ SRC =  AMateria.cpp  Character.cpp  \
 OBJ = $(SRC:.cpp=.o)
 
 CPP = c++
-CFLAGS = -Wall -Werror -Wextra -std=c++98
+CFLAGS = -Wall -Werror #-Wextra -std=c++98
 
 HEADER = AMateria.hpp  Character.hpp  Cure.hpp \
 		 Ice.hpp  ICharacter.hpp  IMateriaSource.hpp

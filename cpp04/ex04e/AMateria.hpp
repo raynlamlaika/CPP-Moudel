@@ -16,7 +16,7 @@
 
 
 #include <iostream>
-
+#include "ICharacter.hpp"
 class ICharacter;
 
 class AMateria
@@ -28,7 +28,7 @@ public:
     AMateria(std::string const & type);
     AMateria &operator=(const AMateria &other);
     AMateria (const AMateria& other);
-    ~AMateria();
+    virtual ~AMateria();
 
 
     std::string const & getType() const;

@@ -33,7 +33,7 @@
 
 ICharacter::~ICharacter()
 {
-    std::cout << "ICharacter: destructor called for ICharacter named: " << this->name << std::endl;
+    std::cout << "ICharacter: destructor called for ICharacter" << std::endl;
 }
 
 
