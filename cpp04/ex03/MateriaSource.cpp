@@ -6,11 +6,15 @@
 /*   By: rlamlaik <rlamlaik@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/25 17:56:54 by rlamlaik          #+#    #+#             */
-/*   Updated: 2025/10/27 10:05:17 by rlamlaik         ###   ########.fr       */
+/*   Updated: 2025/10/28 03:46:01 by rlamlaik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "MateriaSource.hpp"
+
+
+
+
 
 MateriaSource::~MateriaSource()
 {
@@ -58,7 +62,7 @@ void MateriaSource::learnMateria(AMateria* m)
 {
     
     if (m == NULL || this->learnedCount >= 4)
-        return;
+        return ;
 
     for (int i = 0; i < this->learnedCount; i++)
     {
@@ -71,3 +75,45 @@ void MateriaSource::learnMateria(AMateria* m)
 }
 
 
+MateriaSource &MateriaSource::operator=(const MateriaSource &other) 
+{
+    this->learnedCount = other.learnedCount;
+    for (int i = 0; i < 4 ;i++)
+    {
+        if (this->templates[i])
+            this->templates[i] = other.templates[i];
+        else
+            break ;
+    }
+    std::cout << "MateriaSource: copy assinemment operator is called" << std::endl;
+    return (*this);
+};
+// MateriaSource &MateriaSource::operator=(const MateriaSource &other)
+// {
+//     if (this != &other) // protect against self-assignment
+//     {
+//         // Delete any existing templates
+//         for (int i = 0; i < 4; i++)
+//         {
+//             if (this->templates[i])
+//             {
+//                 delete this->templates[i];
+//                 this->templates[i] = NULL;
+//             }
+//         }
+
+//         // Copy (clone) from the other
+//         for (int i = 0; i < 4; i++)
+//         {
+//             if (other.templates[i])
+//                 this->templates[i] = other.templates[i]->clone();
+//             else
+//                 this->templates[i] = NULL;
+//         }
+
+//         this->learnedCount = other.learnedCount;
+//     }
+
+//     std::cout << "MateriaSource: copy assignment operator is called" << std::endl;
+//     return *this;
+// }
