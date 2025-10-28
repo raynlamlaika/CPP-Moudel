@@ -1,15 +1,13 @@
 NAME = Plymorphism
 
-SRC =  AMateria.cpp  Character.cpp  \
-		Cure.cpp  Ice.cpp  main.cpp MateriaSource.cpp
+SRC =  Animal.cpp  Cat.cpp  Dog.cpp  main.cpp
 
 OBJ = $(SRC:.cpp=.o)
 
 CPP = c++
 CFLAGS = -Wall -Werror -Wextra -std=c++98
 
-HEADER = AMateria.hpp  Character.hpp  Cure.hpp \
-		 Ice.hpp  ICharacter.hpp  IMateriaSource.hpp
+HEADERS = Animal.hpp  Cat.hpp  Dog.hpp
 
 all: $(NAME)
 
@@ -17,9 +15,8 @@ $(NAME): $(OBJ)
 	$(CPP)  $(CFLAGS) $^ -o $(NAME)
 
 
-%.o: %.cpp $(HEADER)
+%.o: %.cpp $(HEADERS)
 	$(CPP)  $(CFLAGS) -c $< -o $@
-
 
 clean:
 	rm -f $(OBJ)

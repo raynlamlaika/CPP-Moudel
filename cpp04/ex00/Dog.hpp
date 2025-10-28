@@ -1,41 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Ice.hpp                                            :+:      :+:    :+:   */
+/*   Dog.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rlamlaik <rlamlaik@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/07 09:56:54 by rlamlaik          #+#    #+#             */
-/*   Updated: 2025/10/12 19:24:20 by rlamlaik         ###   ########.fr       */
+/*   Created: 2025/09/18 06:52:12 by rlamlaik          #+#    #+#             */
+/*   Updated: 2025/10/28 03:00:25 by rlamlaik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 
-#ifndef ICE_HPP
-# define ICE_HPP
-
-#include "AMateria.hpp"
 
 
-class Ice : public AMateria
+#ifndef DOG_HPP
+# define DOG_HPP
+
+
+#include "Animal.hpp"
+
+
+
+class Dog : public Animal
 {
-private:
-    std::string name;
-
-
 public:
-    Ice();
-    Ice(std::string const & type);
-    Ice &operator=(const Ice &other);
-    Ice (const Ice& other);
-    ~Ice();
+    Dog();
+    ~Dog();
+    Dog &operator=(const Dog &other);
+    Dog(const Dog& other);
 
-    void use(ICharacter& target);
-    AMateria*   clone();
     
-    std::string const &getname() const;
-    void setname(std::string name);
+    void makeSound() const;
+    std::string getType() const;
+    void setType(std::string type);
 };
-
 
 #endif

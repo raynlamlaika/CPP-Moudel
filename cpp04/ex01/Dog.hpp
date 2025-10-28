@@ -1,40 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Cure.hpp                                           :+:      :+:    :+:   */
+/*   Dog.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rlamlaik <rlamlaik@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/07 10:06:22 by rlamlaik          #+#    #+#             */
-/*   Updated: 2025/10/13 13:34:01 by rlamlaik         ###   ########.fr       */
+/*   Created: 2025/09/18 06:52:12 by rlamlaik          #+#    #+#             */
+/*   Updated: 2025/09/24 14:04:33 by rlamlaik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#ifndef DOG_HPP
+# define DOG_HPP
 
-#ifndef CURE_HPP
-# define CURE_HPP
+#include "Animal.hpp"
+#include "Brain.hpp"
 
-
-#include "AMateria.hpp"
-
-class Cure : public AMateria
+class Dog : public Animal
 {
 private:
-    std::string name;
-
+   Brain *thinks;
 public:
-    Cure();
-    Cure(std::string const & name);
-    Cure &operator=(const Cure &other);
-    Cure (const Cure& other);
-    ~Cure();
+    
+    Dog();
+    ~Dog();
+    Dog &operator=(const Dog &other);
+    Dog(const Dog& other);
 
-    std::string const & getname() const;
-    void setname(std::string name);
-
-    virtual AMateria* clone();
-    void use(ICharacter& target);
+    void makeSound() const;
+    std::string getType() const;
+    void setType(std::string type);
 };
-
 
 #endif

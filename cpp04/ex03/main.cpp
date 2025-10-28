@@ -1,9 +1,11 @@
 
+// Character.hpp  Cure.hpp  Ice.hpp  ICharacter.hpp  IMateriaSource.hpp  MateriaSource.hpp
+
+#include "AMateria.hpp"
+#include "Cure.hpp"
+#include "Ice.hpp"
 #include "MateriaSource.hpp"
 #include "Character.hpp"
-#include "Ice.hpp"
-#include "Cure.hpp"
-
 
 int main()
 {
@@ -13,6 +15,9 @@ int main()
     ICharacter* me = new Character("me");
     AMateria* tmp;
     tmp = src->createMateria("ice");
+    tmp = src->createMateria("Cure");
+    tmp = src->createMateria("vv");
+    tmp = src->createMateria("vv");
     me->equip(tmp);
     tmp = src->createMateria("cure");
     me->equip(tmp);
